@@ -62,19 +62,29 @@ var gameBoard = [
 				[1,0,0,1,0,0,0,0,0,0],
 				[1,0,0,1,0,0,0,0,0,0],
 				[1,0,0,0,0,0,0,0,0,0]
-				]
+			]
+
+
 
 function fireTorpedo() {
 
-
-	var row = letterConversion[nowLetter];
 	var userInput = $("#textInput").val();
-	var nowLetter = userInput.substring(0,1);
-	var column = userInput.substring(1.2);
+	var rowLetter = userInput.substring(0,1);
+	var column = userInput.substring(1,3);
+	var row = letterConversion[rowLetter];
+	var battleshipGuess = gameBoard[row][column];
+	var myDivString = "#s" + row + (column - 1);
+	console.log(row);
+	console.log(column);
 
-	userInput = document.getElementById("exampleInput").value;
-	rowLetter = userInput.substring(0,1);
-	console.log(rowLetter);
+
+	if (battleshipGuess == 1) {
+		console.log(myDivString);
+		$(myDivString).css("background-color", "red");
+	}
+	 else {
+		 $(myDivString).css("background-color", "gray");
+	 }
 
 
 
