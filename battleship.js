@@ -21,7 +21,7 @@ var letterConversion = {
 	"J": 9
 }
  	var letterArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
-	var hitCount = 16;
+	var hitCount = 0;
 
 // makes the grid columns and rows
 for (i = 0; i < cols; i++) {
@@ -90,6 +90,6 @@ function fireTorpedo() {
 		 }
 
 		 if (hitCount == 17) {
-			 console.log("YOURRS HIIP")
+			 console.log("YOU HAVE HIT ALL SHIPS!!!!")
 		 }
 }
