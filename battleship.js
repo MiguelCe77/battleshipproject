@@ -21,7 +21,7 @@ var letterConversion = {
 	"J": 9
 }
  	var letterArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
-	var hitCount = 0;
+	var hitCount = 16;
 
 // makes the grid columns and rows
 for (i = 0; i < cols; i++) {
@@ -87,5 +87,9 @@ function fireTorpedo() {
 		}
 		 else {
 			 $(myDivString).css("background-color", "gray");
+		 }
+
+		 if (hitCount == 17) {
+			 console.log("YOURRS HIIP")
 		 }
 }
